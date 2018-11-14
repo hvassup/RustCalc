@@ -1,1 +1,1 @@
-export const imgPathPrefix = '../';
+export const imgPathPrefix = '../RustCalculator';

@@ -33,7 +33,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "imgPathPrefix", function() { return imgPathPrefix; });
-var imgPathPrefix = '../';
+var imgPathPrefix = '../RustCalculator';
 
 
 /***/ }),
