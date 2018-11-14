@@ -23,6 +23,21 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/Config.ts":
+/*!***********************!*\
+  !*** ./src/Config.ts ***!
+  \***********************/
+/*! exports provided: imgPathPrefix */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "imgPathPrefix", function() { return imgPathPrefix; });
+var imgPathPrefix = '../';
+
+
+/***/ }),
+
 /***/ "./src/app/app.component.html":
 /*!************************************!*\
   !*** ./src/app/app.component.html ***!
@@ -147,7 +162,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>Item amount</p>\n<input [(ngModel)]=\"itemAmount\" (change)=\"numbersChanged()\" (click)=\"numbersChanged()\"/>\n<br/>\n<p>Stack count</p>\n<input [(ngModel)]=\"splitCount\" (change)=\"numbersChanged()\" (click)=\"numbersChanged()\"/>\n<br/>\n<br/>\n<div>\n  <img src=\"{{_itemToBurn.image}}\" height=\"40\" width=\"40\"/>\n  <div class=\"numbered-image\">\n    <img src=\"../RustCalculator/assets/images/wood.png\" height=\"40\" width=\"40\"/>\n    <img class=\"burn\" src=\"../RustCalculator/assets/images/fuel.png\" height=\"20\" width=\"20\"/>\n    <p *ngIf=\"requiredWoodAmount > 1\">\n      x{{requiredWoodAmount}}\n    </p>\n  </div>\n  <img src=\"../RustCalculator/assets/images/rarrow.png\" height=\"13\" width=\"32\"/>\n\n  <div class=\"numbered-image\">\n    <img src=\"{{_itemToBurn.burnsTo.image}}\" height=\"40\" width=\"40\"/>\n    <p *ngIf=\"_itemToBurn.burnsToAmount * itemAmount\">\n      x{{_itemToBurn.burnsToAmount * itemAmount}}\n    </p>\n\n  </div>\n</div>\n"
+module.exports = "<div id=\"inputContainer\">\n  <p>Item amount</p>\n  <input [(ngModel)]=\"itemAmount\" (input)=\"numbersChanged()\"/>\n  <p>Stack count</p>\n  <input [(ngModel)]=\"splitCount\" (input)=\"numbersChanged()\"/>\n</div>\n\n<div class=\"numbered-image first\" >\n  <img src=\"{{_itemToBurn.image}}\" height=\"40\" width=\"40\"/>\n  <p *ngIf=\"itemAmount\">\n    x{{itemAmount}}\n  </p>\n</div>\n<div class=\"numbered-image\">\n  <img src=\"../RustCalculator/assets/images/wood.png\" height=\"40\" width=\"40\"/>\n  <img class=\"burn\" src=\"../RustCalculator/assets/images/fuel.png\" height=\"20\" width=\"20\"/>\n  <p *ngIf=\"requiredWoodAmount > 1\">\n    x{{requiredWoodAmount}}\n  </p>\n</div>\n<img src=\"../RustCalculator/assets/images/rarrow.png\" height=\"13\" width=\"32\"/>\n\n<div class=\"numbered-image\">\n  <img src=\"{{_itemToBurn.burnsTo.image}}\" height=\"40\" width=\"40\"/>\n  <p *ngIf=\"_itemToBurn.burnsToAmount * itemAmount\">\n    x{{_itemToBurn.burnsToAmount * itemAmount}}\n  </p>\n\n</div>\n"
 
 /***/ }),
 
@@ -158,7 +173,7 @@ module.exports = "<p>Item amount</p>\n<input [(ngModel)]=\"itemAmount\" (change)
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "input {\n  text-align: right;\n  margin: 5px 5px 0px; }\n\nimg {\n  display: inline-block; }\n\n.numbered-image {\n  width: 40px;\n  height: 40px;\n  margin: 20px;\n  display: inline-block;\n  vertical-align: middle;\n  position: relative; }\n\n.numbered-image .burn {\n    position: absolute;\n    right: 2px;\n    top: -2px; }\n\n.numbered-image p {\n    position: absolute;\n    width: 100%;\n    text-align: right;\n    line-height: 12px;\n    font-size: 12px;\n    color: #ffffff;\n    bottom: -8px;\n    right: 0px; }\n\np {\n  color: #fff; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVybi1jaGFydC9DOlxcVXNlcnNcXEplbnNcXFdlYnN0b3JtUHJvamVjdHNcXFJ1c3RDYWxjdWxhdG9yL3NyY1xcYXBwXFxidXJuLWNoYXJ0XFxidXJuLWNoYXJ0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQWlCO0VBQ2pCLG9CQUFtQixFQUNwQjs7QUFDRDtFQUNFLHNCQUFxQixFQUN0Qjs7QUFDRDtFQUNFLFlBQVc7RUFDWCxhQUFZO0VBQ1osYUFBWTtFQUNaLHNCQUFxQjtFQUNyQix1QkFBc0I7RUFDdEIsbUJBQWtCLEVBZ0JuQjs7QUF0QkQ7SUFRSSxtQkFBa0I7SUFDbEIsV0FBVTtJQUNWLFVBQVMsRUFDVjs7QUFYSDtJQWFJLG1CQUFrQjtJQUNsQixZQUFXO0lBQ1gsa0JBQWlCO0lBQ2pCLGtCQUFpQjtJQUNqQixnQkFBZTtJQUNmLGVBQWM7SUFDZCxhQUFZO0lBQ1osV0FBVSxFQUNYOztBQUVIO0VBQ0UsWUFBVyxFQUNaIiwiZmlsZSI6InNyYy9hcHAvYnVybi1jaGFydC9idXJuLWNoYXJ0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW5wdXQge1xyXG4gIHRleHQtYWxpZ246IHJpZ2h0O1xyXG4gIG1hcmdpbjogNXB4IDVweCAwcHg7XHJcbn1cclxuaW1nIHtcclxuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbn1cclxuLm51bWJlcmVkLWltYWdlIHtcclxuICB3aWR0aDogNDBweDtcclxuICBoZWlnaHQ6IDQwcHg7XHJcbiAgbWFyZ2luOiAyMHB4O1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAuYnVybiB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICByaWdodDogMnB4O1xyXG4gICAgdG9wOiAtMnB4O1xyXG4gIH1cclxuICBwIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgdGV4dC1hbGlnbjogcmlnaHQ7XHJcbiAgICBsaW5lLWhlaWdodDogMTJweDtcclxuICAgIGZvbnQtc2l6ZTogMTJweDtcclxuICAgIGNvbG9yOiAjZmZmZmZmO1xyXG4gICAgYm90dG9tOiAtOHB4O1xyXG4gICAgcmlnaHQ6IDBweDtcclxuICB9XHJcbn1cclxucHtcclxuICBjb2xvcjogI2ZmZjtcclxufVxyXG4iXX0= */"
+module.exports = "#inputContainer {\n  margin-bottom: 20px; }\n\np {\n  color: #fff; }\n\ninput {\n  text-align: right;\n  display: inline-block; }\n\nimg {\n  display: inline-block; }\n\n.numbered-image {\n  width: 40px;\n  height: 40px;\n  margin: 20px;\n  display: inline-block;\n  vertical-align: middle;\n  position: relative; }\n\n.numbered-image.first {\n    margin-right: -15px; }\n\n.numbered-image .burn {\n    position: absolute;\n    right: 2px;\n    top: -2px; }\n\n.numbered-image p {\n    position: absolute;\n    width: 100%;\n    text-align: right;\n    line-height: 12px;\n    font-size: 12px;\n    color: #ffffff;\n    bottom: -8px;\n    right: 0px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVybi1jaGFydC9DOlxcVXNlcnNcXEplbnNcXFdlYnN0b3JtUHJvamVjdHNcXFJ1c3RDYWxjdWxhdG9yL3NyY1xcYXBwXFxidXJuLWNoYXJ0XFxidXJuLWNoYXJ0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usb0JBQW1CLEVBQ3BCOztBQUNEO0VBQ0UsWUFBVyxFQUNaOztBQUVEO0VBQ0Usa0JBQWlCO0VBQ2pCLHNCQUFxQixFQUN0Qjs7QUFFRDtFQUNFLHNCQUFxQixFQUN0Qjs7QUFFRDtFQUNFLFlBQVc7RUFDWCxhQUFZO0VBQ1osYUFBWTtFQUlaLHNCQUFxQjtFQUNyQix1QkFBc0I7RUFDdEIsbUJBQWtCLEVBZ0JuQjs7QUF6QkQ7SUFLSSxvQkFBbUIsRUFDcEI7O0FBTkg7SUFXSSxtQkFBa0I7SUFDbEIsV0FBVTtJQUNWLFVBQVMsRUFDVjs7QUFkSDtJQWdCSSxtQkFBa0I7SUFDbEIsWUFBVztJQUNYLGtCQUFpQjtJQUNqQixrQkFBaUI7SUFDakIsZ0JBQWU7SUFDZixlQUFjO0lBQ2QsYUFBWTtJQUNaLFdBQVUsRUFDWCIsImZpbGUiOiJzcmMvYXBwL2J1cm4tY2hhcnQvYnVybi1jaGFydC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiNpbnB1dENvbnRhaW5lciB7XHJcbiAgbWFyZ2luLWJvdHRvbTogMjBweDtcclxufVxyXG5wIHtcclxuICBjb2xvcjogI2ZmZjtcclxufVxyXG5cclxuaW5wdXQge1xyXG4gIHRleHQtYWxpZ246IHJpZ2h0O1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxufVxyXG5cclxuaW1nIHtcclxuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbn1cclxuXHJcbi5udW1iZXJlZC1pbWFnZSB7XHJcbiAgd2lkdGg6IDQwcHg7XHJcbiAgaGVpZ2h0OiA0MHB4O1xyXG4gIG1hcmdpbjogMjBweDtcclxuICAmLmZpcnN0IHtcclxuICAgIG1hcmdpbi1yaWdodDogLTE1cHg7XHJcbiAgfVxyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAuYnVybiB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICByaWdodDogMnB4O1xyXG4gICAgdG9wOiAtMnB4O1xyXG4gIH1cclxuICBwIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgdGV4dC1hbGlnbjogcmlnaHQ7XHJcbiAgICBsaW5lLWhlaWdodDogMTJweDtcclxuICAgIGZvbnQtc2l6ZTogMTJweDtcclxuICAgIGNvbG9yOiAjZmZmZmZmO1xyXG4gICAgYm90dG9tOiAtOHB4O1xyXG4gICAgcmlnaHQ6IDBweDtcclxuICB9XHJcbn1cclxuXHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -358,19 +373,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "items", function() { return items; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "burnableItems", function() { return burnableItems; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getItemFromName", function() { return getItemFromName; });
+/* harmony import */ var _Config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Config */ "./src/Config.ts");
+
 var items = [
-    { name: 'Metal Fragments', image: '../RustCalculator/assets/images/metal.fragments.png' },
-    { name: 'High Quality Metal', image: '../RustCalculator/assets/images/metal.refined.png' },
-    { name: 'Sulphur', image: '../RustCalculator/assets/images/sulfur.png' },
-    { name: 'Charcoal', image: '../RustCalculator/assets/images/charcoal.png' }
+    { name: 'Metal Fragments', image: _Config__WEBPACK_IMPORTED_MODULE_0__["imgPathPrefix"] + '/assets/images/metal.fragments.png' },
+    { name: 'High Quality Metal', image: _Config__WEBPACK_IMPORTED_MODULE_0__["imgPathPrefix"] + '/assets/images/metal.refined.png' },
+    { name: 'Sulphur', image: _Config__WEBPACK_IMPORTED_MODULE_0__["imgPathPrefix"] + '/assets/images/sulfur.png' },
+    { name: 'Charcoal', image: _Config__WEBPACK_IMPORTED_MODULE_0__["imgPathPrefix"] + '/assets/images/charcoal.png' }
 ];
 var burnableItems = [
-    { name: 'Can of beans', image: '../RustCalculator/assets/images/can.beans.empty.png', burnrate: 15, burnsTo: getItemFromName('Metal Fragments'), burnsToAmount: 15 },
-    { name: 'Can of tuna', image: '../RustCalculator/assets/images/can.tuna.empty.png', burnrate: 15, burnsTo: getItemFromName('Metal Fragments'), burnsToAmount: 10 },
-    { name: 'High Quality Metal Ore', image: '../RustCalculator/assets/images/hq.metal.ore.png', burnrate: 10, burnsTo: getItemFromName('High Quality Metal'), burnsToAmount: 1 },
-    { name: 'Metal Ore', image: '../RustCalculator/assets/images/metal.ore.png', burnrate: 5, burnsTo: getItemFromName('Metal Fragments'), burnsToAmount: 1 },
-    { name: 'Sulphur Ore', image: '../RustCalculator/assets/images/sulfur.ore.png', burnrate: 2.5, burnsTo: getItemFromName('Sulphur'), burnsToAmount: 1 },
-    { name: 'Wood', image: '../RustCalculator/assets/images/wood.png', burnrate: 1, burnsTo: getItemFromName('Charcoal'), burnsToAmount: 1 }
+    { name: 'Can of beans', image: _Config__WEBPACK_IMPORTED_MODULE_0__["imgPathPrefix"] + '/assets/images/can.beans.empty.png', burnrate: 15, burnsTo: getItemFromName('Metal Fragments'), burnsToAmount: 15 },
+    { name: 'Can of tuna', image: _Config__WEBPACK_IMPORTED_MODULE_0__["imgPathPrefix"] + '/assets/images/can.tuna.empty.png', burnrate: 15, burnsTo: getItemFromName('Metal Fragments'), burnsToAmount: 10 },
+    { name: 'High Quality Metal Ore', image: _Config__WEBPACK_IMPORTED_MODULE_0__["imgPathPrefix"] + '/assets/images/hq.metal.ore.png', burnrate: 10, burnsTo: getItemFromName('High Quality Metal'), burnsToAmount: 1 },
+    { name: 'Metal Ore', image: _Config__WEBPACK_IMPORTED_MODULE_0__["imgPathPrefix"] + '/assets/images/metal.ore.png', burnrate: 5, burnsTo: getItemFromName('Metal Fragments'), burnsToAmount: 1 },
+    { name: 'Sulphur Ore', image: _Config__WEBPACK_IMPORTED_MODULE_0__["imgPathPrefix"] + '/assets/images/sulfur.ore.png', burnrate: 2.5, burnsTo: getItemFromName('Sulphur'), burnsToAmount: 1 },
+    { name: 'Wood', image: _Config__WEBPACK_IMPORTED_MODULE_0__["imgPathPrefix"] + '/assets/images/wood.png', burnrate: 1, burnsTo: getItemFromName('Charcoal'), burnsToAmount: 1 }
 ];
 function getItemFromName(name) {
     return items.find(function (i) { return i.name === name; }) || burnableItems.find(function (i) { return i.name === name; });

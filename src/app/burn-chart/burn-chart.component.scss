@@ -1,14 +1,26 @@
+#inputContainer {
+  margin-bottom: 20px;
+}
+p {
+  color: #fff;
+}
+
 input {
   text-align: right;
-  margin: 5px 5px 0px;
+  display: inline-block;
 }
+
 img {
   display: inline-block;
 }
+
 .numbered-image {
   width: 40px;
   height: 40px;
   margin: 20px;
+  &.first {
+    margin-right: -15px;
+  }
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -28,6 +40,4 @@ img {
     right: 0px;
   }
 }
-p{
-  color: #fff;
-}
+
