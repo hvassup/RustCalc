@@ -147,7 +147,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  {{_itemToBurn.name}}\n</p>\n<input [(ngModel)]=\"itemAmount\" type=\"number\" min=\"1\" (change)=\"numbersChanged()\" (click)=\"numbersChanged()\"/>\n\n<input [(ngModel)]=\"splitCount\" type=\"number\" min=\"1\" (change)=\"numbersChanged()\" (click)=\"numbersChanged()\" />\n<br />\n<div class=\"numbered-image\">\n  <img src=\"/assets/images/wood.png\" height=\"40\" width=\"40\"/>\n  <img class=\"burn\" src=\"/assets/images/fuel.png\" height=\"20\" width=\"20\"/>\n  <p *ngIf=\"requiredWoodAmount > 1\">\n    x{{requiredWoodAmount}}\n  </p>\n</div>\n<img src=\"/assets/images/rarrow.png\" height=\"13\" width=\"32\"/>\n\n<div class=\"numbered-image\">\n  <img src=\"{{_itemToBurn.burnsTo.image}}\" height=\"40\" width=\"40\"/>\n  <p *ngIf=\"_itemToBurn.burnsToAmount * itemAmount\">\n    x{{_itemToBurn.burnsToAmount * itemAmount}}\n  </p>\n\n</div>\n"
+module.exports = "<p>\n  {{_itemToBurn.name}}\n</p>\n<input [(ngModel)]=\"itemAmount\" type=\"number\" min=\"1\" (change)=\"numbersChanged()\" (click)=\"numbersChanged()\"/>\n\n<input [(ngModel)]=\"splitCount\" type=\"number\" min=\"1\" (change)=\"numbersChanged()\" (click)=\"numbersChanged()\" />\n<br />\n<div class=\"numbered-image\">\n  <img src=\"/RustCalculator/assets/images/wood.png\" height=\"40\" width=\"40\"/>\n  <img class=\"burn\" src=\"/RustCalculator/assets/images/fuel.png\" height=\"20\" width=\"20\"/>\n  <p *ngIf=\"requiredWoodAmount > 1\">\n    x{{requiredWoodAmount}}\n  </p>\n</div>\n<img src=\"/RustCalculator/assets/images/rarrow.png\" height=\"13\" width=\"32\"/>\n\n<div class=\"numbered-image\">\n  <img src=\"{{_itemToBurn.burnsTo.image}}\" height=\"40\" width=\"40\"/>\n  <p *ngIf=\"_itemToBurn.burnsToAmount * itemAmount\">\n    x{{_itemToBurn.burnsToAmount * itemAmount}}\n  </p>\n\n</div>\n"
 
 /***/ }),
 
@@ -359,18 +359,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "burnableItems", function() { return burnableItems; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getItemFromName", function() { return getItemFromName; });
 var items = [
-    { name: 'Metal Fragments', image: '/assets/images/metal.fragments.png' },
-    { name: 'High Quality Metal', image: '/assets/images/metal.refined.png' },
-    { name: 'Sulphur', image: '/assets/images/sulfur.png' },
-    { name: 'Charcoal', image: '/assets/images/charcoal.png' }
+    { name: 'Metal Fragments', image: '/RustCalculator/assets/images/metal.fragments.png' },
+    { name: 'High Quality Metal', image: '/RustCalculator/assets/images/metal.refined.png' },
+    { name: 'Sulphur', image: '/RustCalculator/assets/images/sulfur.png' },
+    { name: 'Charcoal', image: '/RustCalculator/assets/images/charcoal.png' }
 ];
 var burnableItems = [
-    { name: 'Can of beans', image: '/assets/images/can.beans.empty.png', burnrate: 15, burnsTo: getItemFromName('Metal Fragments'), burnsToAmount: 15 },
-    { name: 'Can of tuna', image: '/assets/images/can.tuna.empty.png', burnrate: 15, burnsTo: getItemFromName('Metal Fragments'), burnsToAmount: 10 },
-    { name: 'High Quality Metal Ore', image: '/assets/images/hq.metal.ore.png', burnrate: 10, burnsTo: getItemFromName('High Quality Metal'), burnsToAmount: 1 },
-    { name: 'Metal Ore', image: '/assets/images/metal.ore.png', burnrate: 5, burnsTo: getItemFromName('Metal Fragments'), burnsToAmount: 1 },
-    { name: 'Sulphur Ore', image: '/assets/images/sulfur.ore.png', burnrate: 2.5, burnsTo: getItemFromName('Sulphur'), burnsToAmount: 1 },
-    { name: 'Wood', image: '/assets/images/wood.png', burnrate: 1, burnsTo: getItemFromName('Charcoal'), burnsToAmount: 1 }
+    { name: 'Can of beans', image: '/RustCalculator/assets/images/can.beans.empty.png', burnrate: 15, burnsTo: getItemFromName('Metal Fragments'), burnsToAmount: 15 },
+    { name: 'Can of tuna', image: '/RustCalculator/assets/images/can.tuna.empty.png', burnrate: 15, burnsTo: getItemFromName('Metal Fragments'), burnsToAmount: 10 },
+    { name: 'High Quality Metal Ore', image: '/RustCalculator/assets/images/hq.metal.ore.png', burnrate: 10, burnsTo: getItemFromName('High Quality Metal'), burnsToAmount: 1 },
+    { name: 'Metal Ore', image: '/RustCalculator/assets/images/metal.ore.png', burnrate: 5, burnsTo: getItemFromName('Metal Fragments'), burnsToAmount: 1 },
+    { name: 'Sulphur Ore', image: '/RustCalculator/assets/images/sulfur.ore.png', burnrate: 2.5, burnsTo: getItemFromName('Sulphur'), burnsToAmount: 1 },
+    { name: 'Wood', image: '/RustCalculator/assets/images/wood.png', burnrate: 1, burnsTo: getItemFromName('Charcoal'), burnsToAmount: 1 }
 ];
 function getItemFromName(name) {
     return items.find(function (i) { return i.name === name; }) || burnableItems.find(function (i) { return i.name === name; });
