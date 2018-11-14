@@ -147,7 +147,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  {{_itemToBurn.name}}\n</p>\n<input [(ngModel)]=\"itemAmount\" type=\"number\" min=\"1\" (change)=\"numbersChanged()\" (click)=\"numbersChanged()\"/>\n\n<input [(ngModel)]=\"splitCount\" type=\"number\" min=\"1\" (change)=\"numbersChanged()\" (click)=\"numbersChanged()\" />\n<br />\n<div class=\"numbered-image\">\n  <img src=\"{{_itemToBurn.image}}\" height=\"40\" width=\"40\"/>\n</div>\n<div class=\"numbered-image\">\n  <img src=\"../RustCalculator/assets/images/wood.png\" height=\"40\" width=\"40\"/>\n  <img class=\"burn\" src=\"../RustCalculator/assets/images/fuel.png\" height=\"20\" width=\"20\"/>\n  <p *ngIf=\"requiredWoodAmount > 1\">\n    x{{requiredWoodAmount}}\n  </p>\n</div>\n<img src=\"../RustCalculator/assets/images/rarrow.png\" height=\"13\" width=\"32\"/>\n\n<div class=\"numbered-image\">\n  <img src=\"{{_itemToBurn.burnsTo.image}}\" height=\"40\" width=\"40\"/>\n  <p *ngIf=\"_itemToBurn.burnsToAmount * itemAmount\">\n    x{{_itemToBurn.burnsToAmount * itemAmount}}\n  </p>\n\n</div>\n"
+module.exports = "<input [(ngModel)]=\"itemAmount\" type=\"number\" min=\"1\" (change)=\"numbersChanged()\" (click)=\"numbersChanged()\"/>\n\n<input [(ngModel)]=\"splitCount\" type=\"number\" min=\"1\" (change)=\"numbersChanged()\" (click)=\"numbersChanged()\"/>\n<br/>\n<div>\n  <img src=\"{{_itemToBurn.image}}\" height=\"40\" width=\"40\"/>\n  <div class=\"numbered-image\">\n    <img src=\"../RustCalculator/assets/images/wood.png\" height=\"40\" width=\"40\"/>\n    <img class=\"burn\" src=\"../RustCalculator/assets/images/fuel.png\" height=\"20\" width=\"20\"/>\n    <p *ngIf=\"requiredWoodAmount > 1\">\n      x{{requiredWoodAmount}}\n    </p>\n  </div>\n  <img src=\"../RustCalculator/assets/images/rarrow.png\" height=\"13\" width=\"32\"/>\n\n  <div class=\"numbered-image\">\n    <img src=\"{{_itemToBurn.burnsTo.image}}\" height=\"40\" width=\"40\"/>\n    <p *ngIf=\"_itemToBurn.burnsToAmount * itemAmount\">\n      x{{_itemToBurn.burnsToAmount * itemAmount}}\n    </p>\n\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -200,7 +200,7 @@ var BurnChartComponent = /** @class */ (function () {
     BurnChartComponent.prototype.ngOnInit = function () {
     };
     BurnChartComponent.prototype.numbersChanged = function () {
-        this.requiredWoodAmount = Math.ceil(this.itemAmount / this.splitCount) * this._itemToBurn.burnrate;
+        this.requiredWoodAmount = Math.ceil(Math.ceil(this.itemAmount / this.splitCount) * this._itemToBurn.burnrate);
         if (this.requiredWoodAmount === Infinity || this.requiredWoodAmount == NaN) {
             this.requiredWoodAmount = 0;
         }

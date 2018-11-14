@@ -22,7 +22,7 @@ export class BurnChartComponent implements OnInit {
   }
 
   numbersChanged() {
-    this.requiredWoodAmount = Math.ceil(this.itemAmount / this.splitCount) * this._itemToBurn.burnrate;
+    this.requiredWoodAmount = Math.ceil(Math.ceil(this.itemAmount / this.splitCount) * this._itemToBurn.burnrate);
     if (this.requiredWoodAmount === Infinity || this.requiredWoodAmount == NaN) {
       this.requiredWoodAmount = 0;
     }
