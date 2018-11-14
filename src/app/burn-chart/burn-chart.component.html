@@ -1,6 +1,9 @@
-<input [(ngModel)]="itemAmount" type="number" min="1" (change)="numbersChanged()" (click)="numbersChanged()"/>
-
-<input [(ngModel)]="splitCount" type="number" min="1" (change)="numbersChanged()" (click)="numbersChanged()"/>
+<p>Item amount</p>
+<input [(ngModel)]="itemAmount" (change)="numbersChanged()" (click)="numbersChanged()"/>
+<br/>
+<p>Stack count</p>
+<input [(ngModel)]="splitCount" (change)="numbersChanged()" (click)="numbersChanged()"/>
+<br/>
 <br/>
 <div>
   <img src="{{_itemToBurn.image}}" height="40" width="40"/>
