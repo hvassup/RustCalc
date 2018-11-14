@@ -4,10 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href /pages/jehj/RustCalc/dist/RustCalculator/",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "ng build --base-href /pages/jehj/RustCalc/dist/RustCalculator/ & git add . & git commit -m 'Automatic Deploy' & git push"
   },
   "private": true,
   "dependencies": {
