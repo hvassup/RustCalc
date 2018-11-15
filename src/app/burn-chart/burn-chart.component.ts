@@ -12,19 +12,29 @@ export class BurnChartComponent implements OnInit {
     this._itemToBurn = item;
     this.numbersChanged();
   }
+
   public _itemToBurn: BurnableItem;
   public itemAmount = 1;
   public splitCount = 1;
   public requiredWoodAmount = 0;
-  constructor() { }
+  public stackSize;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
   numbersChanged() {
     this.requiredWoodAmount = Math.ceil(Math.ceil(this.itemAmount / this.splitCount) * this._itemToBurn.burnrate);
-    if (this.requiredWoodAmount === Infinity || this.requiredWoodAmount == NaN) {
+    if (this.requiredWoodAmount === Infinity || this.requiredWoodAmount === NaN) {
       this.requiredWoodAmount = 0;
+    }
+    const tmp = Math.ceil(this.itemAmount / this.splitCount);
+    if (tmp === Infinity || tmp === NaN) {
+      this.stackSize = '';
+    } else {
+      this.stackSize = '' + tmp;
     }
   }
 

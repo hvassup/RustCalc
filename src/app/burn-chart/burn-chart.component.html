@@ -8,7 +8,7 @@
 <div class="numbered-image first" >
   <img src="{{_itemToBurn.image}}" height="40" width="40"/>
   <p *ngIf="itemAmount">
-    x{{itemAmount}}
+    {{stackSize}}x{{itemAmount}}
   </p>
 </div>
 <div class="numbered-image">
@@ -27,3 +27,4 @@
   </p>
 
 </div>
+
